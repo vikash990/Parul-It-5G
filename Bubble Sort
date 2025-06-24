@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+   int arr[]={7,11,-10,5,17,-2,8,2,22,100,9};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   for(int j=0;j<size;j++){
+     for(int i=0;i<size-1-i;i++){
+       if(arr[i]>arr[i+1]){
+           int temp=arr[i];
+           arr[i]=arr[i+1];
+           arr[i+1]=temp;
+       } 
+     }
+   }
+  
+  for(int i=0;i<size;i++){
+      printf("%d ",arr[i]);
+  }
+   
+
+    return 0;
+}
